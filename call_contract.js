@@ -39,7 +39,7 @@ web3.personal.unlockAccount(address, pwd);
 var myContract = web3.eth.contract(abi).at(myContractAddress);
 
 console.log('\x1b[0m%s\x1b[31m%s\x1b[0m' , "Calling setValue2( " + process.argv[2] + "," , process.argv[3] , ")");
-myContract.setValue2(process.argv[2], process.argv[3], {from:address ,gas: 100000}, function(err, address) {
+myContract.setValue2(process.argv[2], process.argv[3], {from:address ,gas: 1000}, function(err, address) {
     if (err) {
         console.log("Transaction err:"+err); // 
     } else {
